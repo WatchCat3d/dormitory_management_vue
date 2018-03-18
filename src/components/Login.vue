@@ -77,7 +77,7 @@ a {
   background-color: white;
 }
 #formBackground {
-  padding-top: 200px;
+  padding-top: 150px;
   background-image: url('../assets/loginBackground.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
