@@ -4,13 +4,13 @@
             <div id="leftBar" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active">
-                        <a href="#">主页</a>
+                        <router-link to="/index">主页</router-link>
                     </li>
                     <li>
-                        <a href="#">年支出</a>
+                        <router-link to="/index/yearCost">年支出</router-link>
                     </li>
                     <li>
-                        <a href="#">月支出</a>
+                        <router-link to="/index/monthCost">月支出</router-link>
                     </li>
                     <li id="logoutButton">
                         <a href="#">登出</a>
@@ -23,13 +23,7 @@
                     <h2>欢迎登陆</h2>
                 </div>
                 <div id="content">
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="background-color:red;">
-                        adf
-                    </div>
-
-                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11" style="background-color:blue;">
-                        h
-                    </div>
+                    <router-view></router-view>
                 </div>
             </div>
             
@@ -62,9 +56,11 @@ window.addEventListener("load", function () {
         padding: 0;
         height: 973px;
         border-right: 1px solid darkblue;
+        background-color: white;
     }
     #leftBar li {
         border-bottom: 1px solid #337AB7;
+        border-radius: 10%;
     }
     .nav-pills {
         width: 100%;
@@ -82,13 +78,11 @@ window.addEventListener("load", function () {
     #bk h2 {
         text-align: left;
     }
-    #content {
-        
-    }
     #logoutButton {
         position: fixed;
         width: 8.2%;
         bottom: 0%;
         border-top: 1px solid #337AB7;
+        border-radius: 10%;
     }
 </style>
