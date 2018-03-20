@@ -36,14 +36,16 @@ export default {
   name: "Index",
   created: function () {
       
+  },
+  mounted: function () {
+    $("#leftBar").css("height", window.innerHeight); 
+    window.onresize = function () {
+        $("#leftBar").css("height", window.innerHeight); 
+        myChart.resize();
+    }
   }
 }
 
-window.addEventListener("load", function () {
-    window.onresize = function () {
-        $("#leftBar").css("height", window.innerHeight); 
-    }
-});
 
 </script>
 
@@ -83,6 +85,7 @@ window.addEventListener("load", function () {
         width: 8.2%;
         bottom: 0%;
         border-top: 1px solid #337AB7;
+        border-right: 1px solid #337AB7;
         border-radius: 10%;
     }
 </style>

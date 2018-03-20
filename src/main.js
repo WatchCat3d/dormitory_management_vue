@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import echarts from 'echarts'
 
 Vue.prototype.echarts = echarts 
+Window.prototype.echarts = echarts
 
 Vue.config.productionTip = false
 
