@@ -41,7 +41,6 @@ export default {
     $("#leftBar").css("height", window.innerHeight); 
     window.onresize = function () {
         $("#leftBar").css("height", window.innerHeight); 
-        myChart.resize();
     }
   }
 }
