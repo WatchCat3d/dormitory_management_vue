@@ -29,7 +29,7 @@
               <div style="height:400px;background-color:white;">   
                 <legend>账单明细</legend>        
                 <ul class="list-group text-left">
-                  <li class="list-group-item">月支出：</li>
+                  <li class="list-group-item">月总支出：</li>
                   <li class="list-group-item">水电费：</li>
                   <li class="list-group-item">饮用水费：</li>
                   <li class="list-group-item">其他费用：</li>
@@ -61,8 +61,11 @@ export default {
     this.drawPie();
     var myChart = echarts.getInstanceByDom(document.getElementById("chart"));
     window.onresize = function () {
-      $("#leftBar").css("height", window.innerHeight); 
+      $("#index").css("height", window.innerHeight); 
       myChart.resize();
+    }
+    window.onmousewheel = function () {
+      $("#index").css("height", document.documentElement.scrollHeight);  
     }
   },
   methods: {

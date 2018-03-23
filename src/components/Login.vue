@@ -33,6 +33,14 @@ export default {
       password: ""
     }
   },
+  mounted: function () {
+    window.onresize = function () {
+      $("#formBackground").css("height", "100%");
+    }
+    window.onmousewheel = function () {
+      $("#formBackground").css("height", document.documentElement.scrollHeight);
+    }
+  },
   computed: {
     canLogin: function () {
       if (this.username != "" && this.password != "")
@@ -82,7 +90,7 @@ a {
   background-image: url('../assets/loginBackground.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 100%;
 }

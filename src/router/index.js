@@ -4,6 +4,7 @@ import Login from '@/components/Login'
 import Index from '@/components/Index'
 import YearCost from '@/components/YearCost'
 import MonthCost from '@/components/MonthCost'
+import IndexContent from '@/components/indexContent'
 
 Vue.use(Router)
 
@@ -20,14 +21,19 @@ export default new Router({
       component: Index,
       children: [
         {
-          path: "yearCost",
+          path: "/index/yearCost",
           name: "YearCost",
           component: YearCost
         },
         {
-          path: "monthCost",
+          path: "/index/monthCost",
           name: "MonthCost",
           component: MonthCost
+        },
+        {
+          path: "/index/indexContent",
+          name: "IndexContent",
+          component: IndexContent
         }
       ]
     }

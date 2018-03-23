@@ -58,8 +58,11 @@ export default {
     this.drawChart();
     var myChart = echarts.getInstanceByDom(document.getElementById("chart"))
     window.onresize = function () {
-      $("#leftBar").css("height", window.innerHeight); 
+      $("#index").css("height", window.innerHeight); 
       myChart.resize();
+    }
+    window.onmousewheel = function () {
+      $("#index").css("height", document.documentElement.scrollHeight); 
     }
   },
   computed: {
@@ -78,7 +81,7 @@ export default {
 
 <style scoped>
   #yearSelect {
-    width: 200px;
+    width: 290px;
   }
   #chart {
     margin-top: 30px;
