@@ -43,7 +43,10 @@ export default {
       }
   },
   created: function () {
-      
+      if (typeof(this.$route.params.username) != "string" || 
+        this.$route.params.username == "") {
+        this.$router.replace({name: "Login"});
+      }  
   },
   methods: {
       setActive0: function () {
